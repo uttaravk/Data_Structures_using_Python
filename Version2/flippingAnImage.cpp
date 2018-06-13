@@ -13,13 +13,22 @@ using namespace std;
 int main()
 {
   vector<vector<int>> A;
-  A={{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}};
+  A={{1,1,0},{1,0,1},{0,0,0}};
   int mysize=A.size();
   int temp=0;
+  int x=0;
   for (int i=0; i<mysize; i++)
   {
     temp=A[i].size();
-    for (int j=0; j<=(temp/2); j++)
+    if(temp%2==0)
+    {
+      x=temp/2;
+    }
+    else
+    {
+      x=(temp/2)+1;
+    }
+    for (int j=0; j<x; j++)
     {
       if(A[i][j]==A[i][temp-(j+1)])
       {
