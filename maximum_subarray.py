@@ -12,9 +12,8 @@ If you have figured out the O(n) solution, try coding another solution using the
 """
 import sys
 
+
 # Brute Force
-
-
 def maxSubArrayMethod1(nums):
     if not nums:
         return 0
@@ -40,9 +39,8 @@ def maxSubArrayMethod1(nums):
         sum = max(nums)
     return sum
 
+
 # Using system module
-
-
 def maxSubArrayMethod2(nums):
     result = -sys.maxint
     sum = 0
