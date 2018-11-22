@@ -43,13 +43,14 @@ Method 1:
 This command calculate the transpose of a matrix and reverses it in place
 As a result, we get 90 degree rotated matrix
 """
-def rotateMethod1(matrix):
+
+
+def rotate_method_1(matrix):
     matrix[:] = zip(*matrix[::-1])
 
 
-
 # Method 2
-def rotateMethod2(matrix):
+def rotate_method_2(matrix):
     # Calculating the transpose of a matrix
     for i in range(0, len(matrix[0])):
         for j in range(0, len(matrix[0])):
@@ -71,12 +72,12 @@ matrix = [
     [4, 5, 6],
     [7, 8, 9]
 ]
-rotateMethod1(matrix)
+rotate_method_1(matrix)
 print(matrix)
 matrix = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
 ]
-rotateMethod2(matrix)
+rotate_method_2(matrix)
 print(matrix)

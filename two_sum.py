@@ -15,23 +15,23 @@ return [0, 1].
 """
 
 
-def twoSum(nums, target):
-    currDiff = target - nums[0]
-    pairs = {currDiff: 0}
+def two_sum(nums, target):
+    curr_diff = target - nums[0]
+    pairs = {curr_diff: 0}
     num1 = 0
     num2 = 0
     for i in range(1, len(nums)):
-        currDiff = target - nums[i]
+        curr_diff = target - nums[i]
         if nums[i] in pairs.keys():
             num1 = i
             num2 = pairs[nums[i]]
             break
         else:
-            pairs.update({currDiff: i})
-    pairsList = [num2, num1]
-    return pairsList
+            pairs.update({curr_diff: i})
+    pairs_list = [num2, num1]
+    return pairs_list
 
 
 nums = [2, 7, 11, 15]
 target = 9
-print (twoSum(nums, target))
+print (two_sum(nums, target))

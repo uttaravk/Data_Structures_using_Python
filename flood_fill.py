@@ -46,7 +46,7 @@ def modify_image(image, sr, sc, newColor, orgColor):
 
 
 # Input function
-def floodFill(image, sr, sc, newColor):
+def flood_fill(image, sr, sc, newColor):
     orgColor = image[sr][sc]
     if orgColor == newColor:
         return image
@@ -57,4 +57,4 @@ image = [[1, 1, 1], [1, 1, 0], [1, 0, 1]]
 sr = 1
 sc = 1
 newColor = 2
-print(floodFill(image, sr, sc, newColor))
+print(flood_fill(image, sr, sc, newColor))

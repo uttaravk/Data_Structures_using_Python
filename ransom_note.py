@@ -9,16 +9,16 @@ Each letter in the magazine string can only be used once in your ransom note.
 Note:
 You may assume that both strings contain only lowercase letters.
 
-canConstruct("a", "b") -> false
-canConstruct("aa", "ab") -> false
-canConstruct("aa", "aab") -> true
+can_construct("a", "b") -> false
+can_construct("aa", "ab") -> false
+can_construct("aa", "aab") -> true
 """
 
 
 import collections
 
 
-def canConstruct(ransomNote, magazine):
+def can_construct(ransomNote, magazine):
     note_count = collections.Counter(ransomNote)
     for letter, count in note_count.items():
         if magazine.count(letter) < count:
@@ -28,8 +28,8 @@ def canConstruct(ransomNote, magazine):
 
 ransomNote = "bg"
 magazine = "efjbdfbdgfjhhaiigfhbaejahgfbbgbjagbddfgdiaigdadhcfcj"
-print(canConstruct(ransomNote, magazine))
+print(can_construct(ransomNote, magazine))
 
 ransomNote = "aa"
 magazine = "ab"
-print(canConstruct(ransomNote, magazine))
+print(can_construct(ransomNote, magazine))

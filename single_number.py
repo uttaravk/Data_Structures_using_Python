@@ -21,7 +21,7 @@ Output: 4
 import collections
 
 
-def singleNumberMethod1(nums):
+def single_number_method_1(nums):
     num_count = collections.Counter(nums)
     for num, cnt in num_count.items():
         if cnt == 1:
@@ -29,10 +29,9 @@ def singleNumberMethod1(nums):
 
 
 # Method 2 using XOR principle
-import collections
 
 
-def singleNumberMethod2(nums):
+def single_number_method_2(nums):
     x = 0
     for num in nums:
         x ^= num
@@ -41,5 +40,5 @@ def singleNumberMethod2(nums):
 
 # Function Calls
 nums = [4, 1, 2, 6, 5, 1, 2, 4, 6]
-print(singleNumberMethod1(nums))
-print(singleNumberMethod2(nums))
+print(single_number_method_1(nums))
+print(single_number_method_2(nums))

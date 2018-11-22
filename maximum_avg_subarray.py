@@ -25,7 +25,7 @@ def initial_sum():
     return init_sum
 
 
-def findMaxAverage(nums, k):
+def find_max_average(nums, k):
     max_avg = 0.0
     curr_avg = 0.0
     if len(nums) == 1:
@@ -46,4 +46,4 @@ def findMaxAverage(nums, k):
     return max_avg
 
 
-print(findMaxAverage(nums, k))
+print(find_max_average(nums, k))

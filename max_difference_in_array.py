@@ -14,7 +14,7 @@ Otherwise, return the maximum difference
 import sys
 
 
-def maxDifference(arr):
+def max_difference(arr):
     min_odd = sys.maxsize
     max_diff = 0
     for i in arr:
@@ -31,4 +31,4 @@ def maxDifference(arr):
 
 
 arr = [2, 7, 2, 3, 5, 8]
-print(maxDifference(arr))
+print(max_difference(arr))

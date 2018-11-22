@@ -14,7 +14,7 @@ import sys
 
 
 # Brute Force
-def maxSubArrayMethod1(nums):
+def max_sub_array_method1(nums):
     if not nums:
         return 0
     sum = min(nums)
@@ -41,7 +41,7 @@ def maxSubArrayMethod1(nums):
 
 
 # Using system module
-def maxSubArrayMethod2(nums):
+def max_sub_array_method2(nums):
     result = -sys.maxint
     sum = 0
     for i in range(len(nums)):
@@ -51,5 +51,5 @@ def maxSubArrayMethod2(nums):
 
 
 nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-print(maxSubArrayMethod1(nums))
-print(maxSubArrayMethod2(nums))
+print(max_sub_array_method1(nums))
+print(max_sub_array_method2(nums))

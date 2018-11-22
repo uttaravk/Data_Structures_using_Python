@@ -27,7 +27,7 @@ s = "egg"
 t = "add"
 
 
-def isIsomorphic(s, t):
+def is_isomorphic(s, t):
     if len(s) != len(t):
         return False
     if len(s) == 0 and len(t) == 0:
@@ -45,4 +45,4 @@ def isIsomorphic(s, t):
     return True
 
 
-print(isIsomorphic(s, t))
+print(is_isomorphic(s, t))

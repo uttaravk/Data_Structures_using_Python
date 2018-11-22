@@ -54,18 +54,18 @@ class Stack:
 
 
 # Solution using Stack and Dictionary
-def isValid(s):
+def is_valid(s):
     stk = Stack()
     if len(s) == 0:
         return True
-    mydict = {'{': '}', '[': ']', '(': ')'}
+    paren_map = {'{': '}', '[': ']', '(': ')'}
     for i in s:
-        if i in mydict:
+        if i in paren_map:
             stk.push(i)
         else:
             if stk.is_empty():
                 return False
-            if mydict[stk.pop()] != i:
+            if paren_map[stk.pop()] != i:
                 return False
     if not stk.is_empty():
         return False
@@ -73,4 +73,4 @@ def isValid(s):
 
 
 # Function Call
-print(isValid("([)]"))
+print(is_valid("([)]"))

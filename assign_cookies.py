@@ -31,7 +31,7 @@ You need to output 2.
 """
 
 
-def findContentChildren(g, s):
+def find_content_children(g, s):
     if len(s) == 0 or len(g) == 0:
         return 0
     g.sort(reverse=True)
@@ -50,14 +50,14 @@ def findContentChildren(g, s):
 #
 g = [1, 2]
 s = [1, 2, 3]
-print(findContentChildren(g, s))
+print(find_content_children(g, s))
 
 #
 g = [1, 2, 3]
 s = [3]
-print(findContentChildren(g, s))
+print(find_content_children(g, s))
 
 #
 g = [10, 9, 8, 7]
 s = [5, 6, 7, 8]
-print(findContentChildren(g, s))
+print(find_content_children(g, s))

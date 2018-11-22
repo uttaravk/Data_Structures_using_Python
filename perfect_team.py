@@ -15,7 +15,7 @@ import sys
 s = "pcmpcmbbbzz"
 
 
-def perfectTeam(s):
+def perfect_team(s):
     subject_count = collections.Counter(s)
     min = sys.maxsize
     for subject, cnt in subject_count.items():
@@ -24,4 +24,4 @@ def perfectTeam(s):
     return min
 
 
-print(perfectTeam(s))
+print(perfect_team(s))

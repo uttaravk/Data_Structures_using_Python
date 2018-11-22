@@ -46,7 +46,7 @@ def score_counter(player_count):
     return player_score
 
 
-def tieBreaker(erica_count, bob_count):
+def tie_breaker(erica_count, bob_count):
     if erica_count["H"] > bob_count["H"]:
         return "Erica"
     elif erica_count["H"] < bob_count["H"]:
@@ -74,7 +74,7 @@ def winner(erica, bob):
         return "Erica"
     elif erica_score < bob_score:
         return "Bob"
-    return(tieBreaker(erica_count, bob_count))
+    return(tie_breaker(erica_count, bob_count))
 
 
 print(winner(erica, bob))

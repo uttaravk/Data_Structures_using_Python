@@ -58,7 +58,7 @@ def roman_to_int(s):
     return num
 
 
-def getSortedList(names):
+def get_sorted_list(names):
     name_list = []
 
     for i in names:
@@ -84,4 +84,4 @@ def getSortedList(names):
     return names
 
 
-print(getSortedList(name_list))
+print(get_sorted_list(name_list))
