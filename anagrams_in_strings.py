@@ -33,10 +33,10 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
 """
 
 import collections
+
+
 s = "cbaebabacd"
 p = "abc"
-# s = "abab"
-# p = "ab"
 
 
 def find_anagrams(s, p):
