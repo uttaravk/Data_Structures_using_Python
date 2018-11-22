@@ -32,17 +32,48 @@ The substring with start index = 1 is "ba", which is an anagram of "ab".
 The substring with start index = 2 is "ab", which is an anagram of "ab".
 """
 
+import collections
 s = "cbaebabacd"
 p = "abc"
-
-
-def create_window(s, p):
+# s = "abab"
+# p = "ab"
 
 
 def find_anagrams(s, p):
     anagram_pos = []
     win = ""
-    win = create_window(s, p)
+
+    p_len = len(p)
+    s_len = len(s)
+
+    if s_len == 0 or p_len > s_len:
+        return []
+
+    p_counter = collections.Counter(p)
+
+    if s_len == p_len:
+        s_counter = collections.Counter(s)
+        if (p_counter == s_counter):
+            anagram_pos.append(0)
+            return anagram_pos
+
+    win = s[0:p_len]
+    win_counter = collections.Counter(win)
+    if(win_counter == p_counter):
+        anagram_pos.append(0)
+
+    for i in range(p_len, s_len):
+        pos = (i - p_len)
+        if win_counter[s[pos]] > 1:
+            win_counter[s[pos]] -= 1
+        else:
+            del win_counter[s[pos]]
+
+        win_counter[s[i]] += 1
+
+        if(win_counter == p_counter):
+            anagram_pos.append(pos + 1)
+
     return anagram_pos
 
 
