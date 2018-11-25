@@ -6,23 +6,23 @@ retrieving the minimum element in constant time.
 push(x) -- Push element x onto stack.
 pop() -- Removes the element on top of the stack.
 top() -- Get the top element.
-getMin() -- Retrieve the minimum element in the stack.
+get_min() -- Retrieve the minimum element in the stack.
 Example:
 
-MinStack minStack = new MinStack();
-minStack.push(-2);
-minStack.push(0);
-minStack.push(-3);
-minStack.getMin();   --> Returns -3.
-minStack.pop();
-minStack.top();      --> Returns 0.
-minStack.getMin();   --> Returns -2.
+min_stack min_stack = new min_stack();
+min_stack.push(-2);
+min_stack.push(0);
+min_stack.push(-3);
+min_stack.get_min();   --> Returns -3.
+min_stack.pop();
+min_stack.top();      --> Returns 0.
+min_stack.get_min();   --> Returns -2.
 
 """
 import sys
 
 
-class MinStack(object):
+class min_stack(object):
     def __init__(self):
         self.stack = []
         self.min_element = sys.maxint
@@ -46,7 +46,7 @@ class MinStack(object):
         else:
             return 0
 
-    def getMin(self):
+    def get_min(self):
         if self.min_element in self.stack:
             return self.min_element
         else:
@@ -54,11 +54,11 @@ class MinStack(object):
             return self.min_element
 
 
-minStack = MinStack()
-print(minStack.push(-2))
-print(minStack.push(0))
-print(minStack.push(-3))
-print(minStack.getMin())
-print(minStack.pop())
-print(minStack.top())
-print(minStack.getMin())
+min_stack = min_stack()
+print(min_stack.push(-2))
+print(min_stack.push(0))
+print(min_stack.push(-3))
+print(min_stack.get_min())
+print(min_stack.pop())
+print(min_stack.top())
+print(min_stack.get_min())
