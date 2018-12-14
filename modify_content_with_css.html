@@ -1,0 +1,19 @@
+<html>
+<body>
+<style>
+  .panel{ border:2px solid #444; }
+  .panel > .panel-heading{font-size: 20px;}
+  .panel > .sub-panel {font-size: 10px;}
+  .panel > .sub-panel.active{background: yellow;}
+  .panel-heading > span:first-child:after {content: '-';}
+</style>
+<div class="panel">
+  <div class="panel-heading">
+    <span>First</span><span>Second</span>
+  </div>
+  <div class="sub-panel">ABC</div>
+  <div class="sub-panel active">XYZ</div>
+</div>
+
+</body>
+</html>
