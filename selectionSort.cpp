@@ -7,16 +7,19 @@ using namespace std;
 void selectionSort(vector<int> &nums) {
   int temp = 0;
   int j = 0;
+  int pos = 0;
   for (int i = 0; i < nums.size(); i++) {
-    j = 0;
+    j = i + 1;
+    pos = i;
     while (j < nums.size()) {
-      if (nums[i] < nums[j]) {
-        temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
+      if (nums[pos] > nums[j]) {
+        pos = j;
       }
       j++;
     }
+    temp = nums[pos];
+    nums[pos] = nums[i];
+    nums[i] = temp;
   }
 }
 
